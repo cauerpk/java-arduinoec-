@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c++</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<a href="index.html">principal</a>
+<a href="pg02.html">arduino</a>
+<a href="pg03.html">c++</a>
+<a href="pg04.html">java</a>
+<body>
+    <h1> Descrição da linguagem de programação C++ completa</h1>
+    <p>C++ é uma linguagem de programação de propósito geral, criada por Bjarne Stroustrup em 1979 como uma extensão da linguagem C, com a adição de recursos de programação orientada a objetos. Ela é amplamente utilizada no desenvolvimento de software que exige alto desempenho e controle direto sobre os recursos do sistema, como sistemas operacionais, jogos, aplicativos de desktop, sistemas embarcados, e motores gráficos. Principais Características do C++ 1. Orientação a Objetos: Um dos principais avanços do C++ em relação ao C é a introdução da programação orientada a objetos (POO). Isso significa que C++ suporta a definição de classes e objetos, permitindo a criação de estruturas de dados mais complexas e reutilizáveis, e facilitando a organização e manutenção de grandes projetos de software. 2. </p>
+    <br>
+    <h2>um código C++ da IDE ARDUÍNO (texto)</h2>
+    <pre>// C++ code
+        //
+        int pot1 = 0, pot2 = 0, res = 0;
+        
+        void setup()
+        {
+          pinMode(12, OUTPUT);
+          pinMode(A0, INPUT);
+          Serial.begin(9600);
+          pinMode(A1, INPUT);
+        
+          pot1 = 0;
+          pot2 = 0;
+          res = 0;
+          digitalWrite(12, LOW);
+        }
+        
+        void loop()
+        {
+          pot1 += analogRead(A0);
+          Serial.println("pot1----------------------------------");
+          Serial.println(pot1);
+          pot2 += analogRead(A1);
+          Serial.println("pot2------------------------------------");
+          Serial.println(pot2);
+          if (pot1 > pot2) {
+            res += (pot1 + pot2);
+            Serial.println("res--------------------------------");
+            Serial.println(res);
+            digitalWrite(12, HIGH);
+          } else {
+            digitalWrite(12, LOW);
+          }
+          delay(1); // Wait for 1 millisecond(s)
+        }</pre>
+    <br>
+    <h2>um código C++ da IDE ARDUÍNO (imagem)</h2>
+    <img src="./c++02.jpg" alt="">
+    
+    
+</body>
+</html>
